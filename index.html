@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -6,8 +7,10 @@
     <title>Julia Opatrny</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/down-1.png">
     <link rel="stylesheet" href="./node_modules/nes.css/css/nes.min.css">
     <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/d01a4c6ae2.js" crossorigin="anonymous"></script>
     <!-- latest -->
     <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
     <!-- core style only -->
@@ -32,55 +35,189 @@
     <!-- <img id="source" src="down-1.png" width="300" height="227" /> -->
     <script src="script.js"></script>
 
-    <div id="resume" class="popup">
-        <div class="resume-content">
-            <div class="resume-header">
-                <h3 class="nes-text">Download my Resume</h2>
-                <button id="resume-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
-            </div>
-            <iframe src="resume.pdf" width="100%" height="500px" frameborder="0"></iframe>
-            <!-- <p>This is the content of the popup window.</p> -->
-            <button id="popup-download-button">Download PDF</button>
-        </div>
-    </div>
+    <div>
+        <!-- <section class="nes-container">
+              <section class="message-left">
+                <i class="nes-bcrikko"></i>
+                <div class="nes-balloon from-left">
+                  <p>Hello NES.css</p>
+                </div>
+              </section>
+        </section> -->
 
-    <div id="about" class="popup">
-        <div class="about-content">
-            <div class="about-header">
-                <h3 class="nes-text">About Me</h2>
-                <button id="about-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
-            </div>
-            <p>Here is all About me</p>
-        </div>
-    </div>
 
-    <div id="education" class="popup">
-        <div class="education-content">
-            <div class="education-header">
-                <h3 class="nes-text">Education</h2>
-                <button id="education-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
-            </div>
-            <p>My list of experiences</p>
-        </div>
-    </div>
 
-    <div id="contacts" class="popup">
-        <div class="contacts-content">
-            <div class="contacts-header">
-                <h3 class="nes-text">How to Reach Me</h2>
-                <button id="contacts-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
+        <div class="overlay">
+            <div id="welcome" class="popup" style="top: 0px; margin-left: 5em; box-shadow: none !important; background-color: none !important; height: 0%">
+                    <!-- <section class="message -left"> -->
+                        <div class="nes-balloon from-left">
+                            <p>Welcome to Juliaville! Explore using the arrow keys or use the cursor to click on buildings.</p>
+                        </div>
+                    <!-- </section> -->
+                </div>
             </div>
-            <p>Socials</p>
         </div>
-    </div>
 
-    <div id="projects" class="popup">
-        <div class="projects-content">
-            <div class="projects-header">
-                <h3 class="nes-text">Projects</h2>
-                <button id="projects-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
+        <div id="resume" class="popup">
+            <div class="resume-content">
+                <div class="resume-header">
+                    <h3 class="nes-text">Resume</h2>
+                    <button id="resume-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
+                </div>
+                <!-- <iframe src="resume.pdf" width="100%" height="500px" frameborder="0"></iframe> -->
+                <!-- <p>This is the content of the popup window.</p> -->
+                <!-- <embed src="resume.pdf" type="application/pdf" width="100%" height="100%" /> -->
+                <!-- <embed src="resume.pdf" width="100%" height="100%" /> -->
+                <img src="resume.png">
+                <button id="popup-download-button" style="margin: 20px">Download PDF</button>
             </div>
-            <p>Socials</p>
+        </div>
+
+        <div id="about" class="popup">
+            <div class="about-content">
+                <div class="about-header">
+                    <h3 class="nes-text">About Me</h3>
+                    <button id="about-close-button" class="nes-btn small" style="height: 3em; width: 3em; display: flex; justify-content: center; align-items: center;">
+                        <i class="nes-icon close is-small"></i>
+                    </button>
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: space-evenly; padding: 20px">
+                    <div style="max-width: 48%; flex: 1;">
+                        <img src="me.jpg" style="max-width: 100%; height: auto; border: 10px solid #fd7f7b">
+                    </div>
+                    <div style="background: #fd7f7b; padding: 20px; text-align: center; margin-left: 20px; flex: 1;">
+                        <p style="margin-top: 10px">Hi there! I'm Julia Opatrny, a full stack engineer with a creative mindset and an eagerness for collaboration. I love building thoughtful and beautiful products, and exploring all areas of a product's development process. My expertise is in Python and JavaScript, but I am excited by learning and being challenged. When I am not coding, you can find me sewing clothes, dancing at a concert, or playing Minecraft.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="education" class="popup">
+            <div class="education-content">
+                <div class="education-header">
+                    <h3 class="nes-text">Education and Experience</h2>
+                    <button id="education-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
+                </div>
+                <div style="margin-top: 120px">
+                    <h2 style="margin-left: 20px">Experience</h2>
+                    <div class="experience">
+                        <h3><b>Veritonic, Inc.</b></h3>
+                        <h4><i>Full Stack Engineer, August 2020 - June 2023</i></h4>
+                        <ul>
+                            <li style="margin-bottom: 10px">Veritonic provides brands, agencies, and publishers with tools and insights to leverage data to make their audio advertising campaigns more effective.</li>
+                            <li style="margin-bottom: 10px">Designed and built extensive features for a web application to facilitate end-to-end audio analysis in the AdTech space.</li>
+                            <li style="margin-bottom: 10px">Led a complete redesign and multiple iterations of the brand lift product to create a more efficient and user-friendly product, including enhanced data modeling and a more intentional UX flow.</li>
+                            <li style="margin-bottom: 10px">Created frontend web pages to allow customers to visualize large datasets using Vue.js and Bootstrap.</li>
+                            <li style="margin-bottom: 10px">Built scheduled programs using S3 and Lambda to analyze and report over 40 million web impressions for conversions.</li>
+                            <li style="margin-bottom: 10px">Collaborated extensively with the product management and client success teams to implement product ideas and designs into code, and suggested improvements to the products.</li>
+                            <li style="margin-bottom: 10px">Managed testing and bug fixing, performed in-depth code reviews, and continuously updated documentation.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience">
+                        <h3><b>WorkMarket, an ADP Company</b></h3>
+                        <h4><i>Software Engineer Intern, June 2019 - August 2019</i></h4>
+                        <ul>
+                            <li style="margin-bottom: 10px">WorkMarket provides a cloud-based enterprise software platform for businesses to manage their agile workforce.</li>
+                            <li style="margin-bottom: 10px">In a paid summer internship, worked on project-based assignments involving front-end and back-end technologies, data analytics, AI, database management, and quality assurance. </li>
+                            <li style="margin-bottom: 10px">Led and built a complete redesign of the employer user dashboard using JavaScript and React.</li>
+                        </ul>
+                    </div>
+
+                    <h2 style="margin-left: 20px; margin-top: 10px">Education</h2>
+                    <div class="experience">
+                        <h3><b>Hamilton College</b></h3>
+                        <h4><i>B.A. in Computer Science, with minors in Digital Arts and Music, May 2020</i></h4>
+                        <ul>
+                            <li style="margin-bottom: 10px">Relevant Coursework: Data Structures, Discrete Mathematics, Principles of Programming Languages, Computer Organization and Assembly Languages, Applied Theory of Computation, Artificial Intelligence, Database Theory and Practice, Compilers, Computer Architecture.</li>
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h3><b>General Assembly</b></h3>
+                        <h4><i>User Experience On Demand Program, August 2023</i></h4>
+                        <ul>
+                            <li style="margin-bottom: 10px">Learned the user experience fundamentals of making a user-friendly digital product from beginning to end, from user research, information architecture, sketching and wire framing, prototyping and testing, and visual design. Created a clickable mock-up for a second-hand baby gear exchange app.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contacts" class="popup">
+            <div class="contacts-content">
+                <div class="contacts-header">
+                    <h3 class="nes-text">Socials</h3>
+                    <button id="contacts-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
+                </div>
+                <div style="background: #7cf8fa; text-align: center; padding: 20px">
+                    <div class="contact-item">
+                        <a href="mailto: jsopatrny@gmail.com.com"><i class="fa-solid fa-envelope" style="font-size:36px; text-decoration: none"></i><h3>jsopatrny@gmail.com</h3></a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/in/julia-opatrny/"><i class="fa-brands fa-linkedin" style="font-size:36px"></i><h3>Connect on LinkedIn</h3></a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://github.com/jsopatrny"><i class="fa fa-github" style="font-size:36px"></i><h3>Code on GitHub</h3></a>
+                    </div>
+                    <div class="contact-item">
+                        <a href="https://vimeo.com/user76213023"><i class="fa-brands fa-vimeo" style="font-size:36px"></i><h3>Watch on Vimeo</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="projects" class="popup">
+            <div class="projects-content">
+                <div class="projects-header">
+                    <h3 class="nes-text">Projects</h2>
+                    <button id="projects-close-button" class="nes-btn small" style="height:3em;width: 3em; display: flex; justify-content: center; align-items: center;"><i class="nes-icon close is-small"></i></button>
+                </div>
+                <!-- List of projects -->
+                <div>
+                    <div class="project" style="margin-top: 120px">
+                        <h3>Decaf Compiler</h3>
+                        <h4><i>Fall 2019</i></h4>
+                        <p>A compiler built in C++ that compiles Decaf code into Jasmin assembly code.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Art History Fantasy Collecting Website</h3>
+                        <h4><i>Fall 2019</i></h4>
+                        <a href="https://github.com/jsopatrny/SeniorProject">GitHub</a>
+                        <p>Designed and collaborated on an art-collecting website built using a MERN stack (MySQL, Express, React, Node.js) commissioned by the Hamilton College Art History Department, to be used by Hamilton art history students.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Employer User Homepage</h3>
+                        <h4><i>Summer 2019 - WorkMarket</i></h4>
+                        <p>A new employer user dashboard for WorkMarket, an ADP Company's website that was independently created, while employed by WorkMarket, using JavaScript and the React framework, and worked with a RESTful API using Postman and Swagger.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>SIC/XE Assembler in Python</h3>
+                        <h4><i>Fall 2018</i></h4>
+                        <p>A program that performs a two-pass compilation of assembly language into machine language.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Hexdump Written in Assembly</h3>
+                        <h4><i>Fall 2018</i></h4>
+                        <p>A program that emulates UNIX hexdump capability, but written in assembly language.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Huffman Encoding Algorithm</h3>
+                        <h4><i>Fall 2017</i></h4>
+                        <p>A compression algorithm written in C++ utilizing Huffman Encoding and binary tree data structures.</p>
+                    </div>
+
+                    <div class="project">
+                        <h3>Sudoku Puzzle Solver</h3>
+                        <h4><i>Fall 2017</i></h4>
+                        <p>A backtracking algorithm written in C++ to successfully solve any and all Sudoku puzzles.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>

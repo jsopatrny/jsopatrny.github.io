@@ -100,7 +100,7 @@ function setLocations() {
     contacts: {
       width: 176,
       height: 201,
-      x: 750,
+      x: 775,
       y: 50,
       door_width: 79,
       door_height: 52,
@@ -125,7 +125,7 @@ function setLocations() {
       width: 176,
       height: 204,
       x: 550,
-      y: 300,
+      y: 305,
       door_width: 79,
       door_height: 46,
       door_x: 49,
@@ -261,8 +261,8 @@ function initialize() {
   playerX = 0;
   playerY = 0;
 
-  playerWidth = 27; //orig: 27
-  playerHeight = 42; //orig: 42
+  playerWidth = 20; //orig: 27
+  playerHeight = 32; //orig: 42
 
   playerRatio = playerHeight / playerWidth
   screenRatio = gameArea.width / playerWidth
@@ -288,6 +288,12 @@ function initialize() {
   defaultFrameImage = new Image();
   defaultFrameImage.src = 'images/down-1.png'; // Replace with the path to your default frame image
 
+  document.addEventListener('DOMContentLoaded', function () {
+    // Code to show the popup when the page is fully loaded
+    const welcome = document.getElementById('welcome');
+    welcome.style.display = 'block';
+  });
+
   defaultFrameImage.addEventListener('load', function () {
     gameLoop();
   });
@@ -312,6 +318,24 @@ function initialize() {
 }
 
 function gameLoop() {
+  // Add event listeners for arrow key presses and clicks
+  document.addEventListener('keydown', function(event) {
+    console.log("HELLO")
+    const welcome = document.getElementById('welcome');
+    if (welcome) {
+      welcome.style.display = 'none';
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    console.log("HELLO2")
+    const welcome = document.getElementById('welcome');
+    if (welcome) {
+      welcome.style.display = 'none';
+    }
+  });
+
+  
   const previousX = playerX;
   const previousY = playerY;
   let animation = 'down'; // Default animation
@@ -336,8 +360,8 @@ function gameLoop() {
   }
 
   // Restrict the player's position within the game area
-  playerX = Math.max(0, Math.min(playerX, 0 + canvas.width - playerWidth * scale));
-  playerY = Math.max(0, Math.min(playerY, 0 + canvas.height - playerHeight * scale));
+  playerX = Math.max(0, Math.min(playerX, 0 + canvas.width - playerWidth));
+  playerY = Math.max(0, Math.min(playerY, 0 + canvas.height - playerHeight));
 
   xRatio = canvas.width / playerX
   yRatio = canvas.height / playerY
@@ -360,6 +384,8 @@ function gameLoop() {
     animationTimer = null;
     frameIndex = 0; // Reset the frame index to display the default frame image
   }
+
+  window.onscroll = function() {headerStick()};
 
   requestAnimationFrame(gameLoop);
 }
@@ -472,8 +498,6 @@ function openPopup(type) {
   popup.style.display = 'block';
 
   let button = type + "-close-button"
-
-  console.log(button)
 
   const closeButton = document.getElementById(button);
   closeButton.addEventListener('click', function() {closePopup(type)});

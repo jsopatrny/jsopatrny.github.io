@@ -1,7 +1,7 @@
 .popup {
   display: none;
   position: fixed;
-  top: 0;
+  top: -50px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -15,11 +15,12 @@
   align-items: left;
   justify-content: start;
   background-color: #ffa4a1;
-  width: 40em;
-  height: 30em;
+  width: 50vw;
+  height: 80vh;
   margin: 100px auto;
   /* padding: 20px; */
   border: white 2px solid;
+  overflow-y: auto;
 }
 
 .about-header {
@@ -28,7 +29,28 @@
   justify-content: space-between;
   background-color: #50adff;
   color: white;
+  padding: 30px;
+  height: 6em;
+}
+
+.project {
+  background-color: #ffb965;
   padding: 20px;
+  margin: 20px
+}
+
+.experience {
+  background-color: #ff87c8;
+  padding: 20px;
+  margin: 20px
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Add some vertical spacing between items */
+  text-decoration: none;
+  color: inherit;
 }
 
 .contacts-content {
@@ -37,11 +59,14 @@
   align-items: left;
   justify-content: start;
   background-color: #befeff;
-  width: 40em;
-  height: 30em;
+  /* width: 50em;
+  height: 40em; */
+  width: 50vw;
+  height: 80vh;
   margin: 100px auto;
   /* padding: 20px; */
   border: white 2px solid;
+  overflow-y: auto;
 }
 
 .contacts-header {
@@ -50,7 +75,8 @@
   justify-content: space-between;
   background-color: #fff290;
   color: black;
-  padding: 20px;
+  padding: 30px;
+  height: 6em;
 }
 
 .education-content {
@@ -59,11 +85,12 @@
   align-items: left;
   justify-content: start;
   background-color: #ffb9df;
-  width: 40em;
-  height: 30em;
+  width: 50vw;
+  height: 80vh;
   margin: 100px auto;
   /* padding: 20px; */
   border: white 2px solid;
+  overflow-y: auto;
 }
 
 .education-header {
@@ -72,7 +99,10 @@
   justify-content: space-between;
   background-color: #9e67c8;
   color: white;
-  padding: 20px;
+  padding: 30px;
+  position: fixed;
+  width: 49.75vw;
+  height: 6em;
 }
 
 .projects-content {
@@ -81,11 +111,12 @@
   align-items: left;
   justify-content: start;
   background-color: #ffd4a0;
-  width: 40em;
-  height: 30em;
+  width: 50vw;
+  height: 80vh;
   margin: 100px auto;
   /* padding: 20px; */
   border: white 2px solid;
+  overflow-y: auto;
 }
 
 .projects-header {
@@ -94,7 +125,10 @@
   justify-content: space-between;
   background-color: #6ebc40;
   color: white;
-  padding: 20px;
+  padding: 30px;
+  position: fixed;
+  width: 49.75vw;
+  height: 6em;
 }
 
 .resume-content {
@@ -103,11 +137,12 @@
   align-items: left;
   justify-content: start;
   background-color: #fff5ac;
-  width: 40em;
-  height: 30em;
+  width: 50vw;
+  height: 80vh;
   margin: 100px auto;
   /* padding: 20px; */
   border: white 2px solid;
+  overflow-y: auto;
 }
 
 .resume-header {
@@ -116,7 +151,8 @@
   justify-content: space-between;
   background-color: #c63232;
   color: white;
-  padding: 20px;
+  padding: 30px;
+  height: 6em;
 }
 
 
@@ -126,8 +162,8 @@
   align-items: left;
   justify-content: start;
   background-color: #ff93ed;
-  width: 40em;
-  height: 30em;
+  width: 50em;
+  height: 40em;
   margin: 100px auto;
   /* padding: 20px; */
   border: white 2px solid;
@@ -139,7 +175,7 @@
   justify-content: space-between;
   background-color: #b1309b;
   color: white;
-  padding: 20px;
+  padding: 30px;
 }
 
 .popup h2 {
