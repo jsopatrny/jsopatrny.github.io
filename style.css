@@ -48,10 +48,32 @@
 .contact-item {
   display: flex;
   align-items: center;
-  margin-bottom: 20px; /* Add some vertical spacing between items */
-  text-decoration: none;
-  color: inherit;
+  background: #7cf8fa;
+  padding: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin: 20px
 }
+
+.contact-item a {
+  text-decoration: none;
+  display: flex; 
+  color: inherit;
+  align-items: center;
+}
+
+.contact-item a:hover {
+  color: #fff290;
+}
+
+.contact-item i {
+  margin-right: 10px; /* Add some horizontal spacing between icon and text */
+}
+
+.contact-item h3 {
+  margin: 0; /* Remove default margin for h3 */
+}
+
 
 .contacts-content {
   display: flex;
